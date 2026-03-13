@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus - Personal AI Assistant</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar glass-panel">
+            <div class="nav-brand">
+                <i class="ph ph-robot"></i>
+                <span>Nexus AI</span>
+            </div>
+            <ul class="nav-links">
+                <li class="active" title="Chat"><i class="ph ph-chats"></i> <span>Chat</span></li>
+                <li title="Journal"><i class="ph ph-notebook"></i> <span>Journal</span></li>
+                <li title="Settings"><i class="ph ph-gear"></i> <span>Settings</span></li>
+            </ul>
+            <div class="user-profile">
+                <div class="avatar">
+                    <i class="ph ph-user"></i>
+                </div>
+                <span>Topiano</span>
+            </div>
+        </nav>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area glass-panel">
+            <header class="chat-header">
+                <div class="header-info">
+                    <h2>Nexus Assistant</h2>
+                    <span class="status-indicator">Online</span>
+                </div>
+            </header>
+
+            <div class="messages-container" id="messages-container">
+                <div class="message ai-message">
+                    <div class="message-avatar"><i class="ph ph-robot"></i></div>
+                    <div class="message-content">
+                        Hello! I am your personal AI assistant. How can I help you today? Whether you are bored and want to chat, or have tasks to organize, I'm here.
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <form id="chat-form">
+                    <button type="button" class="action-btn" title="Add Attachment"><i class="ph ph-paperclip"></i></button>
+                    <input type="text" id="chat-input" placeholder="Message Nexus..." autocomplete="off">
+                    <button type="submit" class="send-btn"><i class="ph-fill ph-paper-plane-right"></i></button>
+                </form>
+            </div>
+        </main>
+
+        <!-- Right Pane: Task Manager -->
+        <aside class="task-pane glass-panel">
+            <header class="task-header">
+                <h3><i class="ph ph-target"></i> Your Tasks</h3>
+                <button id="clear-tasks-btn" class="icon-btn" title="Clear All Completed"><i class="ph ph-trash"></i></button>
+            </header>
+            
+            <div class="tasks-container" id="tasks-container">
+                <!-- Tasks will be injected here via JS -->
+            </div>
+        </aside>
+    </div>
+
+    <!-- UI Background Glow Effect -->
+    <div class="bg-glow blob-1"></div>
+    <div class="bg-glow blob-2"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
